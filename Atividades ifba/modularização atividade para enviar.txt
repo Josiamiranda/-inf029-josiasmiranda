@@ -1,0 +1,88 @@
+ponto.h
+
+#ifdef PONTO_H
+#define PONTO_H
+
+
+typedef struct ponto{
+
+
+int x;
+int y;
+
+}
+
+Ponto;
+
+
+Ponto definePonto (int x, int y);
+
+int valorX (ponto p);
+int valorY (ponto p);
+int origem (ponto p);
+
+
+#endif
+
+
+----------------------------
+
+
+ponto.c
+
+
+#include "ponto.h"
+
+
+Ponto definePonto (int x,int y){
+
+Ponto p;
+
+p.x=x;
+p.y=y;
+
+return p;
+
+}
+
+int valorX(ponto p){
+
+return p.y;
+
+}
+
+
+int origem(ponto p){
+
+
+if (p.x==0 && p.y ==0) return1;
+else return 0;
+
+}
+
+------------------------
+
+
+main.c
+
+"include "ponto.h"
+
+"include <stdio.h>
+
+int main() {
+
+int x,y;
+
+printf("Digite o ponto na forma x y: \n");
+scanf("%d %d", &x,&y);
+
+Ponto p =definePonto(x,y);
+inserePonto(&d,p);
+
+}
+
+
+
+
+
+
