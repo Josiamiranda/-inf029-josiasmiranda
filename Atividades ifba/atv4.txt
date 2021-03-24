@@ -1,0 +1,52 @@
+
+
+int vetor(int num1, int num2, int num3)
+{
+	
+	int i,vet[30];
+	
+	
+	
+	
+	vet[0]=num1;
+    vet[1]=num2;
+    vet[2]=num3;
+    
+	
+	 for(i=0;i<3;i=i+1)
+    {
+    	
+    	printf(" \n  O vetor de : %d   : %d",i, vet[i]);
+	}
+	
+	
+	 return vet[0];
+
+}
+
+int main(void)
+{
+	
+	int num,num1,num2,rt,r1,r2,r3;
+	
+	printf("Digite o numero:\n");
+	scanf("%d",&num);
+	
+	printf("Digite outro numero:\n");
+	scanf("%d",&num1);
+	
+	printf("Digite mais numero:\n");
+	scanf("%d",&num2);
+	
+	rt=vetor(num,num1,num2);
+	
+	printf(" \n   O resultado total eh:  1=%d:  2=%d :  3=%d \n ",num,num1,num2);
+	
+	
+	
+	
+}
+
+     
+
+
