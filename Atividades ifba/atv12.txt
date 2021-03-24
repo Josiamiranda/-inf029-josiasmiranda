@@ -1,0 +1,59 @@
+comparação de 1 etra com a palavra ainda em erro
+
+
+#include <iostream>
+#include <stdio.h>
+#include <string.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+	 
+	int N,j,i,k=0;
+    char aux[11];
+    char nomes[N][11];
+    char let[10],let1[10],let2[10];
+    
+    
+    int mat,cpf,nmat;
+    char sex,nas[N][11];
+    
+	printf("Digite o total de alunos matriculados:\n");
+	scanf("%d",&nmat);
+	
+	printf("Digite a primeira letra comparativa:\n");
+	scanf("%s",&let);
+	
+	for(i=1;i<=nmat;i=i+1)
+	{
+
+		printf("Digite o seu nome:\n");
+		scanf("%[^\n]s",nomes[i]);
+		getchar();	
+	}
+	
+
+printf("\n  aqui estão os nomes na ordem digitados\n");
+	for(i=0;i<nmat;i++){
+		
+		printf("%s\n",nomes[i]);
+	}
+	for(i=0;i<N;i++){
+            if(nomes[i]==let){
+            	
+            	k=k+1;
+               
+            }
+        
+	}
+	
+	printf("A quantidade que se repete eh: %d ",k);
+	 
+	printf("\naqui os nomes em ordem crescente\n");
+	for(i=0;i<N;i++){
+		printf("%s\n",nomes[i]);
+	}
+	
+	
+	
+	
