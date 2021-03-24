@@ -1,0 +1,28 @@
+
+
+
+int fatorial(int r3)
+{
+	
+	int r=1,i;
+	
+	for(i=1;i<=5;i=i+1)
+ 	{
+ 		r=r*i;
+ 		 
+	 }
+	 
+	 return r;
+
+}
+
+int main(void)
+{
+	
+	int num=5,fat,i,rt;
+	
+	
+	rt=fatorial(num);
+	
+	printf("O resultado do fatorial eh:%d \n ",rt);
+}
