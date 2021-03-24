@@ -1,0 +1,325 @@
+
+9-9) Evolua o programa que tem a função cadastrarCliente, para fazer as validações dos dados. Cada
+validação deve ser feita em uma função diferente, conforme lista abaixo. A função cadastrarCliente
+deve chamar cada uma dessas funções. A função main deve imprimir se o cadastro foi realizado
+com sucesso ou se houve erro, informando onde foi o erro:
+• função validarNome: recebe o nome digitado, e valida se nome tem até 20 caracteres;
+• função validarSexo: recebe o sexo digitado, e valida é um sexo válido (opções: m e M para
+masculino; f e F para feminino, o e O para outro).
+• função validarCPF: recebe o cpf digitado, e valida é um cpf válido;
+• função validarNacimento: recebe o data digitada, e valida é uma data válida.
+
+
+-----------------------------------------------------
+
+função validarSexo:
+
+
+
+#include<stdio.h>
+#include<conio.h>
+#include <string.h>
+
+
+
+int Sextin(int sex)
+{
+	char let=1;
+	char let1=2;
+	char let2=3;
+	char let3=4;
+	char let4=5;
+	char let5=6;
+	
+	
+	if(sex!=let || sex!=let1 || sex!=let2 ||sex!=let3 ||sex!=let4 ||sex!=let5 )
+   {
+   	printf("Repita ate estar de acordo com os paramentros especidficados:\n");
+   	
+   	while (sex!=let || sex!=let1 || sex!=let2 ||sex!=let3 ||sex!=let4 ||sex!=let5)
+        {
+        	
+        	printf("Digite o sexo:\n");
+            scanf("%d",&sex);
+        	
+        }
+        
+        
+   	
+   }
+   
+   return sex;
+   
+   
+	
+}
+
+
+int main(void){
+	
+	int sex1;
+	char let=1;
+	char let1=2;
+	char let2=3;
+	char let3=4;
+	char let4=5;
+	char let5=6; 
+     int r;
+     
+     printf(" \n Digite 1 para O = outro \n ");
+     printf("Digite 2 para o  = outro \n ");
+     printf("Digite 3 para F = feminino \n ");
+     printf("Digite 4 para f = feminino \n ");
+     printf("Digite 5 para M = masculino \n ");
+     printf("Digite 6 para m masculino \n ");
+    
+
+   printf("Digite o sexo:\n");
+   scanf("%d",&sex1);
+   
+   
+   r=Sextin(sex1);
+   
+   printf("Resultado eh:%d",r);
+   
+ 
+   
+   
+}
+
+-------------------------------------------
+
+função nome
+
+#include <stdio.h>
+    
+    int main(void)
+    {
+        int numeroCaracteres = 0;
+        char caractere = getchar();
+        while (caractere != '\n')
+        {
+            numeroCaracteres = numeroCaracteres + 1;
+           caractere = getchar();
+           
+           
+       }
+       printf("%d\n", numeroCaracteres);
+       
+       if(numeroCaracteres>20)
+           {
+           	printf("Repita o nome  ate chegar a menos de 20 caracteres: ");
+           	
+           	int numeroCaracteres = 0;
+        char caractere = getchar();
+           	
+           	 while (caractere != '\n')
+        {
+            numeroCaracteres = numeroCaracteres + 1;
+           caractere = getchar();
+           
+           
+       }
+       
+       printf("%d\n", numeroCaracteres);
+           	
+		   }
+		   
+		   
+       return 0;
+   }
+
+---------------------------------
+
+
+
+ função validarCPF: 
+
+
+#include<stdio.h>
+#include<conio.h>
+#include <string.h>
+
+
+
+char cpf(char nome[30], char nome1[30]){
+	
+	
+	int i,j,k;
+	
+	
+	for(i=1,j=1;i<=4,j<=4;i=i+1,j=j+1)
+ {
+ 	if(nome[i]!=nome1[j])
+ 	{
+ 		
+ 		k=k+1;
+ 		
+ 		
+ 		
+	 }
+
+ }
+ 
+ if(k!=0)
+ {
+ printf("Os nomes sao diferentes repitam ate estarem iguais:\n");
+ 
+ printf("Digite um nome:\n ");
+ scanf("%s",&nome);
+ 
+ printf("Digite outro  nome:\n ");
+ scanf("%s",&nome1);
+ 
+ 
+ for(i=1,j=1;i<=4,j<=4;i=i+1,j=j+1)
+ {
+ 	if(nome[i]!=nome1[j])
+ 	{
+ 		
+ 		k=k+1;
+ 		
+ 		
+ 		
+	 }
+
+ }
+ 
+ return k ;
+ 
+}
+
+else 
+{
+	printf("O cpf eh igual:\n");
+}
+	
+	
+	
+	
+}
+
+
+
+
+int main(void)
+
+{
+
+
+	char nome[30],nome1[30];
+
+int i,j,k=0;
+
+int r;
+
+
+printf("Digite o primeiro cpf:\n ");
+ scanf("%s",&nome);
+ 
+ printf("Digite o cpf comparador :\n ");
+ scanf("%s",&nome1);
+ 
+ 
+ r=cpf(nome,nome1);
+ 
+ printf("O cpf eh igual  %s  ",nome);
+ 
+ 
+}
+
+-------------------------------------
+função nascimento
+
+
+#include<stdio.h>
+#include<conio.h>
+#include <string.h>
+
+
+
+char validarNacimento(char nasc[30], char nasc1[30]){
+	
+	
+	int i,j,k;
+	
+	
+	for(i=1,j=1;i<=4,j<=4;i=i+1,j=j+1)
+ {
+ 	if(nasc[i]!=nasc1[j])
+ 	{
+ 		
+ 		k=k+1;
+ 		
+ 		
+ 		
+	 }
+
+ }
+ 
+ if(k!=0)
+ {
+ printf("Os nomes sao diferentes repitam ate estarem iguais:\n");
+ 
+ printf("Digite a primeira data de nascimento::\n ");
+ scanf("%s",&nasc);
+ 
+ printf("igite a data de nascimento comparadora  :\n ");
+ scanf("%s",&nasc1);
+ 
+ 
+ for(i=1,j=1;i<=4,j<=4;i=i+1,j=j+1)
+ {
+ 	if(nasc[i]!=nasc1[j])
+ 	{
+ 		
+ 		k=k+1;
+ 		
+ 		
+ 		
+	 }
+
+ }
+ 
+ return k ;
+ 
+}
+
+else 
+{
+	printf("O cpf eh igual:\n");
+}
+	
+	
+	
+	
+}
+
+
+
+
+int main(void)
+
+{
+
+
+	char nasc[30],nasc1[30];
+
+int i,j,k=0;
+
+char r[30];
+
+
+printf("Digite a primeira data de nascimento:\n ");
+ scanf("%s",&nasc);
+ 
+ printf("Digite a data de nascimento comparadora  :\n ");
+ scanf("%s",&nasc1);
+ 
+ 
+ r[30]=validarNacimento(nasc,nasc1);
+ 
+ printf("O cpf eh igual  %s  ",nasc);
+ 
+ 
+}
