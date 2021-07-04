@@ -1,0 +1,387 @@
+
+#include <iostream>
+#include <stdio.h>
+#include <string.h>
+#include<conio.h>
+
+ int Opcoes(int num1)
+ {
+  int i,k;
+int j,temp;
+int  l, c;
+int vz,ps,casas;
+int ret;
+int num[70],elem[70],npo[70][70];
+int qtd;
+int r;
+int pos,local;
+ret=num1;
+
+printf("\n Num eh :%d \n",num1);
+
+
+
+printf("\n Digite a quantidade de elementos colocados:\n");
+scanf("%d",&qtd);
+
+for(i=1;i<=qtd;i=i+1)
+{
+printf("\n Digite o numero na posicao:%d \n ",i);
+scanf("%d",&num[i]);
+
+//2-6--1,2,3,4,5,6.
+
+
+printf(" \n na posicao:%d \n digite a quantidade de elementos: \n ",num[i]);
+scanf("%d",&elem[i]);
+
+//if(i=1)
+//else if(i=2)
+//npo1[k]
+for(k=1;k<=elem[i];k=k+1)
+
+{
+//npo[i][k]
+printf("\n Digite o numero naquela posicao%d:\n",i);
+scanf("%d",&npo[i][k]);
+}
+
+if(i<=qtd)
+{
+
+printf("\n Nao tem mais espaco para inserir numeros, sendo assim proxima casa:%d\n ",i+1);
+
+}
+
+return qtd;
+}
+ 
+if(num1==2)
+{
+
+
+printf("\n A quantidade total de elementos colocados sao: %d \n ",qtd);
+
+for(i=1;i<=qtd;i=i+1)
+{
+printf("\n O  numero na posicao representando a estrutura principal:%d eh :%d \n ",i,num[i]);
+printf(" \n Sua quantidade de elementos na estrutura auxiliar eh: %d \n ",elem[i]);
+
+for(k=1;k<=elem[i];k=k+1)
+
+{
+
+printf("\n  O numero naquela posicao %d eh %d\n",i,npo[i][k]);
+
+}
+
+
+}
+
+}
+
+if(num1==3)
+{
+
+//  3- Listar os números ordenados para cada estrutura auxiliar
+
+printf(" Listagem dos números ordenados para cada estrutura auxiliar");
+for(i=1;i<=qtd;i=i+1)
+{
+printf(" \n Sua quantidade de elementos na estrutura auxiliar eh: %d \n ",elem[i]);
+
+for(k=1;k<=elem[i];k=k+1)
+
+{
+
+printf("\n  O numero naquela posicao- %d eh %d:\n",i,npo[i][k]);
+
+
+
+}
+
+
+// Ordenação da estrutura auxiliar
+            for (k=1;k<=elem[i];k=k+1) {
+               
+                for (l = 1; l <= qtd; l++) {
+                    for (c = 1; c <=elem[i]; c++) {
+                       
+                        if (npo[i][k] < npo[l][c]) {
+                            int aux = npo[i][k];
+                            npo[i][k] = npo[l][c];
+                            npo[l][c] = aux;
+                        }
+                    }
+                }
+            }
+            }
+       
+// impressão da matriz ordenada
+for(i=1;i<=qtd;i=i+1)
+{
+printf("\n Ordenacao na ordem crescente na posicao %d \n ",i);
+
+for (k=1;k<=elem[i];k=k+1)
+
+{
+printf("\n");
+
+
+printf("\n %d \n ",npo[i][k]);
+
+}
+}
+}
+
+if(num1==4)
+{
+
+printf("\n A quantidade total de elementos colocados sao: %d \n ",qtd);
+
+for(i=1;i<=qtd;i=i+1)
+{
+printf("\n O  numero na posicao representando a estrutura principal:%d eh :%d \n ",i,num[i]);
+printf(" \n Sua quantidade de elementos na estrutura auxiliar eh: %d \n ",elem[i]);
+
+for(k=1;k<=elem[i];k=k+1)
+
+{
+
+printf("\n  O numero naquela posicao %d eh %d\n",i,npo[i][k]);
+
+}
+
+
+}
+
+//   Listar os números ordenados para cada estrutura auxiliar
+
+printf(" Listagem dos números ordenados para cada estrutura auxiliar");
+for(i=1;i<=qtd;i=i+1)
+{
+printf(" \n Sua quantidade de elementos na estrutura auxiliar eh: %d \n ",elem[i]);
+
+for(k=1;k<=elem[i];k=k+1)
+
+{
+
+printf("\n  O numero naquela posicao- %d eh %d:\n",i,npo[i][k]);
+
+
+
+}
+
+
+// Ordenação da estrutura auxiliar
+            for (k=1;k<=elem[i];k=k+1) {
+               
+                for (l = 1; l <= qtd; l++) {
+                    for (c = 1; c <=elem[i]; c++) {
+                       
+                        if (npo[i][k] < npo[l][c]) {
+                            int aux = npo[i][k];
+                            npo[i][k] = npo[l][c];
+                            npo[l][c] = aux;
+                        }
+                    }
+                }
+            }
+            }
+       
+// impressão da matriz ordenada
+for(i=1;i<=qtd;i=i+1)
+{
+printf("\n Ordenacao na ordem crescente na posicao %d \n ",i);
+
+for (k=1;k<=elem[i];k=k+1)
+
+{
+printf("\n");
+
+
+printf("\n %d \n ",npo[i][k]);
+
+}
+}
+
+
+/*
+
+Ordenação na ordem das posições
+for(i=1;i<=qtd;i=i+1)
+{
+
+printf("%d",num[i]);
+
+
+printf("\n Digite o numero na posicao:%d \n ",i);
+scanf("%d",&num[i]);
+}
+
+// Ordenação da estrutura auxiliar
+for(k=1;k<=qtd;k=k+1)
+for(j=i+1;j<=qtd;j=j+1)
+{
+if(num[i]>num[j])
+{
+temp=num[i];
+num[i]=num[j];
+num[j]=temp;
+}
+}
+
+// impressão do vetor ordenado
+
+printf("\n");
+printf("Ordenacao na ordem crescente");
+for(k=1;k<=elem[i];k=k+1)
+{
+printf("%d",num[i]);
+}
+
+*/
+}
+
+
+//5-
+if(num1==5){
+
+
+
+printf("Digite a quantidade de vezes que pretende efetuar a operação:\n");
+scanf("%d",&qtd);
+
+
+for(i=1;i<=qtd;i=i+1)
+{
+
+printf("Digite a posicao da estrutura principal:\n");
+scanf("%d",pos);
+printf("Digite o local do numero:\n");
+scanf("%d",local);
+
+npo[pos][local]==0;
+
+}
+
+}
+
+/*
+
+
+                           6. Aumentar o tamanho de uma estrutura auxiliar.
+                            */
+                           
+                            if(num1==6)
+                            {
+
+                            printf("Digite a quantidade de vezes que serao efetuadas");
+                            scanf("%d",vz);
+                           
+                            for(i=1.;i<=vz;i=i+1)
+                            {
+                           
+
+                           
+                            printf("Digite a posicao do elemento");
+                            scanf("%d",ps);
+                            printf("Digite a quantidade de casas adicionais");
+                            scanf("%d",casas);
+                           
+                           
+                            for(k=elem[ps];k<=elem[ps]+casas;k=k+1)
+
+{
+//npo[i][k]
+printf("\n Digite o numero naquela posicao:\n");
+scanf("%d",&npo[ps][k]);
+}
+
+
+                           
+                           }
+
+
+}
+
+//7. Sair
+
+if(num1==7)
+{
+
+return 0;
+
+
+}
+/*
+if(num>7)
+
+{
+
+
+
+Colocar a repetica, senão finaliza
+
+
+
+
+}
+
+*/
+            return(num1);
+           
+           
+// arquivo de compra- mudanças para arquivo1 e mudança do nome para compras
+
+/*
+arquivo = fopen("registronumerico.txt","wt"); //wt = Gravação
+                                       //rt = Leitura
+                                       //a  = append
+
+    if(arquivo==NULL){      //Se houver algum erro, o ponteiro apontará para NULL
+        printf("Nao foi possivel abrir o arquivo");
+        exit(0);
+    }
+   
+    for(i=1;i<=qtd;i=i+1)
+    for(k=1;k<=elem[i];k=k+1)
+{
+{
+fprintf(arquivo," na posicao: %d digite a quantidade de elementos: %d  numero naquela posicao: %d \n", num[i],elem[i], npo[i][k]);
+}
+}
+fclose(arquivo);
+
+ 
+   
+*/
+ }
+
+
+int main(void) {
+
+int num[70],elem[70],npo[70][70];
+int i,k,qtd;
+int j,temp;
+int  l, c;
+int num1,vz,ps,casas;
+int r;
+
+printf("\n Caso voce deseje  mostrar para cada posicao da estrutura principal \n Digite 2 :\n ");
+printf("\n Listar os numeros ordenados para cada estrutura auxiliar \n Digite 3  :\n ");
+printf("\n Listar todos os números de forma ordenada.\n Digite 4\n");
+printf("\nExcluir um elemento zerando.\n Digite 5\n");
+printf("\nAumentar o tamanho de uma estrutura auxiliar. \n Digite 6 \n");
+printf("\n Sair. \n Digite 7\n ");
+//printf("\nCaso deseje continuar. Digite 8 ou um numero superior \n ");
+scanf("%d",&num1);
+
+printf("\n\n  Escolha %d \n \n  ",num1);
+
+r=Opcoes( num1);
+
+printf("O numero eh:%d",r);
+
+
+}
