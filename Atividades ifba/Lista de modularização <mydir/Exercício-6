@@ -1,0 +1,54 @@
+6-
+
+
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+
+
+int Lertresletras (char let [30], char let1 [30], char let2 [30])
+{
+
+	char r1 [30], r2 [30], r3 [30];
+
+	r1 [30] = deixe [30];
+	r2 [30] = let1 [30];
+	r3 [30] = let2 [30];
+
+
+
+   return r1 [30];
+
+
+
+}
+
+
+int main (void) {
+
+
+     char r, let [30], let1 [30], let2 [30];
+
+
+
+
+
+
+   printf ("Digite a primeira letra: \ n");
+   scanf ("% s", & let);
+
+   printf ("Digite a segunda letra: \ n");
+   scanf ("% s", & let1);
+
+    printf ("Digite a segunda letra: \ n");
+   scanf ("% s", & let2);
+
+   r = Lertresletras (let, let1, let2);
+
+   printf ("As letras sao:% s =% s =% s", let, let1, let2);
+
+
+
+
+}
