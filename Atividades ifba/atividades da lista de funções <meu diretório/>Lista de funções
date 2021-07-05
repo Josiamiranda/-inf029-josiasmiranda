@@ -1,0 +1,1010 @@
+1- 
+
+#include <stdio.h>
+#include <conio.h>
+
+int soma (int N1, int N2) 
+{
+  int resultado;
+  resultado = N1 + N2;
+  retorno (resultado); // retornando o valor para main
+}
+/ ******************* função principal (main) ********************* /
+int main (vazio)
+{
+  int V1, V2, resultado;
+  printf ("Digite o primeiro valor:");
+  scanf ("% d", & V1);
+  printf ("Digite o segundo valor:");
+  scanf ("% d", & V2);
+  
+  // chama a função e recebe o retorno
+  resultado = soma (V1, V2);
+  
+  printf ("Resultado =% d \ n", resultado);
+  
+  getch ();
+  return 0;
+}
+
+-----------------------------------------
+
+2
+#include <stdio.h>
+#include <conio.h>
+/ *
+
+subtrai int (int N1, int N2, int N3) 
+{
+  int resultado;
+  resultado = N1 - N2-N3;
+  retorno (resultado); // retornando o valor para main
+}
+/ ******************* função principal (main) ********************* /
+int main (vazio)
+{
+  int V1, V2, V3, resultado;
+  printf ("Digite o primeiro valor:");
+  scanf ("% d", & V1);
+  printf ("Digite o segundo valor:");
+  scanf ("% d", & V2);
+  printf ("Digite o terceiro valor:");
+  scanf ("% d", & V3);
+  
+  // chama a função e recebe o retorno
+  resultado = subtrai (V1, V2, V3);
+  
+  printf ("Resultado =% d \ n", resultado);
+  
+  getch ();
+  return 0;
+}
+----------------------
+
+
+3) Faça um programa que tenha uma função que recebe um número inteiro e retorna o fatorial
+deste número. Esta função deve ainda verificar se é possível o fatorial, se não for, ela deve
+de alguma forma retornar para um erro principal que deu algum erro. A função principal deve solicitar o valor do
+usuário e imprimir o fatorial dele, ou se não é possível calcular o fatorial.
+
+
+int fatorial (int r3)
+{
+	
+	int r = 1, i;
+	
+	para (i = 1; i <= 5; i = i + 1)
+ 	{
+ 		r = r * i;
+ 		 
+	 }
+	 
+	 return r;
+
+}
+
+int main (vazio)
+{
+	
+	int num = 5, gordura, i, rt;
+	
+	
+	rt = fatorial (num);
+	
+	printf ("O resultado do fatorial eh:% d \ n", rt);
+}
+------------------------------------------------
+
+int fatorial (int r3)
+{
+	
+	int r = 1, i, num;
+	
+	num = r3;
+	
+	para (i = 1; i <= num; i = i + 1)
+ 	{
+ 		r = r * i;
+ 		 
+	 }
+	 
+	 return r;
+
+}
+
+int main (vazio)
+{
+	
+	int num = 5, gordura, i, rt;
+	
+	printf ("Digite o numero: \ n");
+	scanf ("% d", & num);
+	
+	
+	rt = fatorial (num);
+	
+	printf ("O resultado do fatorial eh:% d \ n", rt);
+}
+
+
+------------------------------------
+
+
+int fatorial (int r3)
+{
+	
+	int r = 1, i, num1;
+	
+	num1 = r3;
+	
+	para (i = 1; i <= num1; i = i + 1)
+ 	{
+ 		r = r * i;
+ 		 
+	 }
+	 
+	 return r;
+
+}
+
+
+	
+	int num, gordura, i, rt;
+	
+	printf ("Digite o numero: \ n");
+	scanf ("% d", & num);
+	
+	
+	rt = fatorial (num);
+	
+	printf ("O resultado do fatorial eh:% d \ n", rt);
+}
+
+
+melhoria
+
+
+vetor int (int num1, int num2, int num3)
+{
+	
+	int i, vet [30];
+	
+	
+	
+	
+	vet [0] = num1;
+    veterinário [1] = num2;
+    veterinário [2] = num3;
+    
+	
+	 para (i = 0; i <3; i = i + 1)
+    {
+    	
+    	printf ("\ n O vetor de:% d:% d", i, vet [i]);
+	}
+	
+	
+	 voltar vet [0];
+
+}
+
+int main (vazio)
+{
+	
+	int num, num1, num2, rt, r1, r2, r3;
+	
+	printf ("Digite o numero: \ n");
+	scanf ("% d", & num);
+	
+	printf ("Digite outro numero: \ n");
+	scanf ("% d", & num1);
+	
+	printf ("Digite mais numero: \ n");
+	scanf ("% d", & num2);
+	
+	rt = vetor (num, num1, num2);
+	
+	printf ("\ n O resultado total eh: 1 =% d: 2 =% d: 3 =% d \ n", num, num1, num2);
+	
+	
+	
+	
+}
+
+     
+
+
+
+3-
+
+	int r = 1, num, gordo, i;
+	
+	printf ("Digite o numero fatorado: \ n");
+	scanf ("% d", & fat);
+ 	
+ 	
+ 	para (i = 1; i <= gordura; i = i + 1)
+ 	{
+ 		r = r * i;
+ 		 
+	 }
+	 
+	 printf ("O fatorial eh:% d", r);
+
+
+4) Crie um programa que tenha uma função ler3Numeros. Essa função deve ler três números do
+usuário e retornar os três números. A função principal deve imprimir esses três números. Utilizar vetor
+para fazer o retorno.
+
+vetor int (int num1, int num2, int num3)
+{
+	
+	int i, vet [30];
+	
+	
+	
+	
+	vet [0] = num1;
+    veterinário [1] = num2;
+    veterinário [2] = num3;
+    
+	
+	 para (i = 0; i <3; i = i + 1)
+    {
+    	
+    	printf ("\ n O vetor de:% d:% d", i, vet [i]);
+	}
+	
+	
+	 voltar vet [0];
+
+}
+
+int main (vazio)
+{
+	
+	int num, num1, num2, rt, r1, r2, r3;
+	
+	printf ("Digite o numero: \ n");
+	scanf ("% d", & num);
+	
+	printf ("Digite outro numero: \ n");
+	scanf ("% d", & num1);
+	
+	printf ("Digite mais numero: \ n");
+	scanf ("% d", & num2);
+	
+	rt = vetor (num, num1, num2);
+	
+	printf ("\ n O resultado do fatorial eh:% d:% d:% d \ n", num, num1, num2);
+	
+	
+	
+	
+}
+
+     
+
+----------------------------------------
+
+
+
+
+melhoria
+
+
+vetor int (int num1, int num2, int num3)
+{
+	
+	int i, vet [30];
+	
+	
+	
+	
+	vet [0] = num1;
+    veterinário [1] = num2;
+    veterinário [2] = num3;
+    
+	
+	 para (i = 0; i <3; i = i + 1)
+    {
+    	
+    	printf ("\ n O vetor de:% d:% d", i, vet [i]);
+	}
+	
+	
+	 voltar vet [0];
+
+}
+
+int main (vazio)
+{
+	
+	int num, num1, num2, rt, r1, r2, r3;
+	
+	printf ("Digite o numero: \ n");
+	scanf ("% d", & num);
+	
+	printf ("Digite outro numero: \ n");
+	scanf ("% d", & num1);
+	
+	printf ("Digite mais numero: \ n");
+	scanf ("% d", & num2);
+	
+	rt = vetor (num, num1, num2);
+	
+	printf ("\ n O resultado total eh: 1 =% d: 2 =% d: 3 =% d \ n", num, num1, num2);
+	
+	
+	
+	
+}
+
+     
+
+
+
+
+
+
+5) Crie um programa que tenha uma função ler4Numeros. Essa função deve ler quatro números do
+usuário e retornar os quatro números. A função principal deve imprimir esses quatro números. Utilizar
+struct para fazer o retorno.
+
+
+	 
+	 
+	 ----------------------------
+
+
+#include <stdio.h>
+#include <conio.h>
+
+
+
+int main (vazio)
+{
+	
+	struct numeros_3_alunos
+	
+	{
+		
+		int num1;
+		int num2;
+                int num3;
+	};
+	
+	
+	struct numeros_3_alunos alunos;
+	
+	printf ("Informe o primeiro numero: \ n");
+	scanf ("% d", & alunos.num1);
+	
+	printf ("Informe o segundo numero: \ n");
+	scanf ("% d", & alunos.num2);
+     
+        printf ("Informe o terceiro numero: \ n");
+	scanf ("% d", & alunos.num3);
+	
+	printf ("Variáveis: \ n");
+
+           
+	rt = vetor (alunos.num1, alunos.num2, alunos.num3);
+	
+	printf ("O primeiro numero eh:% d \ n", alunos.num1);
+	
+	printf ("O Segundo numero eh:% d \ n", alunos.num2);
+	
+        printf ("O terceiro numero eh:% d \ n", alunos.num3);
+	
+	getch;
+	
+ return (0);
+}
+
+
+ideia- coisa só efetuar uma modificação
+
+#include <stdio.h>
+
+
+vetor int (int num1, int num2, int num3)
+{
+	
+	int i, vet [30], r, r1, r2;
+	
+
+	r = num1;
+    r1 = num2;
+    r2 = num3;
+    
+	
+	 
+	
+	 return r;
+
+}
+
+int main (vazio)
+{
+	
+	int num, num1, num2, rt, r1, r2, r3;
+	
+	printf ("Digite o numero: \ n");
+	scanf ("% d", & num);
+	
+	printf ("Digite outro numero: \ n");
+	scanf ("% d", & num1);
+	
+	printf ("Digite mais numero: \ n");
+	scanf ("% d", & num2);
+	
+	rt = vetor (num, num1, num2);
+	
+	printf ("\ n O resultado total eh:% d:% d:% d \ n", num, num1, num2);
+	
+	
+}
+
+
+----------------------------
+
+
+feito
+
+
+vetor int (int num1, int num2, int num3)
+{
+	
+	int i, vet [30], r, r1, r2;
+	
+
+	r = num1;
+    r1 = num2;
+    r2 = num3;
+    
+	
+	 
+	
+	 return r;
+
+}
+
+int main (vazio)
+{
+	
+	struct numeros_3_alunos
+	
+	{
+		
+		int num1;
+		int num2;
+        int num3;
+        int rt;
+	};
+	
+	
+	struct numeros_3_alunos alunos;
+	
+	printf ("Informe o primeiro numero: \ n");
+	scanf ("% d", & alunos.num1);
+	
+	printf ("Informe o segundo numero: \ n");
+	scanf ("% d", & alunos.num2);
+     
+        printf ("Informe o terceiro numero: \ n");
+	scanf ("% d", & alunos.num3);
+	
+	printf ("Variáveis: \ n");
+
+           
+	alunos.rt = vetor (alunos.num1, alunos.num2, alunos.num3);
+	
+	printf ("O primeiro numero eh:% d \ n", alunos.num1);
+	
+	printf ("O Segundo numero eh:% d \ n", alunos.num2);
+	
+        printf ("O terceiro numero eh:% d \ n", alunos.num3);
+	
+		
+ 
+}
+
+   
+
+-------------------------------------------------- ----
+6-
+
+
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+
+
+int Lertresletras (char let [30], char let1 [30], char let2 [30])
+{
+	
+	char r1 [30], r2 [30], r3 [30];
+	
+	r1 [30] = deixe [30];
+	r2 [30] = let1 [30];
+	r3 [30] = let2 [30];
+
+   
+   
+   return r1 [30];
+   
+   
+	
+}
+
+
+int main (void) {
+	
+	 
+     char r, let [30], let1 [30], let2 [30];
+     
+     
+     
+     
+    
+
+   printf ("Digite a primeira letra: \ n");
+   scanf ("% s", & let);
+   
+   printf ("Digite a segunda letra: \ n");
+   scanf ("% s", & let1);
+   
+    printf ("Digite a segunda letra: \ n");
+   scanf ("% s", & let2);
+   
+   r = Lertresletras (let, let1, let2);
+   
+   printf ("As letras sao:% s =% s =% s", let, let1, let2);
+   
+ 
+   
+   
+}
+
+
+-------------------------------------------------- ------------------------
+7-
+
+
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+
+
+int Lertrespalavras (char let [30], char let1 [30], char let2 [30])
+{
+	
+	char r1 [30], r2 [30], r3 [30];
+	
+	r1 [30] = deixe [30];
+	r2 [30] = let1 [30];
+	r3 [30] = let2 [30];
+
+   
+   
+   return r1 [30];
+   
+   
+	
+}
+
+
+int main (void) {
+	
+	 
+     char r, let [30], let1 [30], let2 [30];
+     
+     
+     
+     
+    
+
+   printf ("Digite a primeira palavra: \ n");
+   scanf ("% s", & let);
+   
+   printf ("Digite a segunda palavra: \ n");
+   scanf ("% s", & let1);
+   
+    printf ("Digite a terceira palavra: \ n");
+   scanf ("% s", & let2);
+   
+   r = Lertrespalavras (let, let1, let2);
+   
+   printf ("As palavras sao:% s =% s =% s", let, let1, let2);
+   
+ 
+   
+   
+}
+
+
+
+
+
+
+-------------------------------------------------- ---------------
+8-
+
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+
+int cadastrarCliente (char nome [30], int data, int cpf, char sex) {
+ 
+ 
+ int i, r1, r2, r3;
+ 
+ char r [30];
+ 
+ 
+    r [30] = nome [30];
+    r1 = dados;
+    r2 = cpf;
+    r3 = sexo;
+    
+    
+	
+	 return r [30];
+ }
+ 
+ 
+ int main (vazio)
+{
+  int V2, V3, resultado;
+  
+  char V1 [30], sexo;
+  
+  
+  printf ("Digite o nome:");
+  scanf ("% s", & V1);
+  
+  printf ("Digite a data de nascimento:");
+  scanf ("% d", & V2);
+  
+  printf ("Digite o cpf:");
+  scanf ("% d", & V3);
+  
+  printf ("Digite o sexo: \ n");
+  scanf ("% s", & sexo);
+  
+  resultado = cadastrarCliente (V1, V2, V3, sexo);
+  
+
+  printf ("O nome eh:% s- sua data de nascimento eh:% d - Seu cpf eh:% d- seu sexo eh:% c", V1, V2, V3, sexo);
+  
+}
+
+
+9-9) Evolua o programa que tem uma função cadastrarCliente, para fazer as validações dos dados. Cada
+validação deve ser feita em uma função diferente, conforme lista abaixo. A função cadastrarCliente
+deve chamar cada uma dessas funções. A função principal deve imprimir se o cadastro foi realizado
+com sucesso ou se houve erro, informando onde foi o erro:
+• função validarNome: recebe o nome digitado, e valida se nome tem até 20 caracteres;
+• função validarSexo: recebe o sexo digitado, e valida é um sexo válido (opções: me M para
+masculino; fe F para feminino, oe O para outro).
+• função validarCPF: recebe o cpf digitado, e valida é um cpf válido;
+• função validarNacimento: recebe o dados digitados, e valida é um dado válido.
+
+
+-------------------------------------------------- ---
+
+função validarSexo:
+
+
+
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+
+
+int Sextin (int sex)
+{
+	char let = 1;
+	char let1 = 2;
+	char let2 = 3;
+	char let3 = 4;
+	char let4 = 5;
+	char let5 = 6;
+	
+	
+	if (sex! = let || sex! = let1 || sex! = let2 || sex! = let3 || sex! = let4 || sex! = let5)
+   {
+   	printf ("Repita estar de acordo com os paramentros especidficados: \ n");
+   	
+   	while (sex! = let || sex! = let1 || sex! = let2 || sex! = let3 || sex! = let4 || sex! = let5)
+        {
+        	
+        	printf ("Digite o sexo: \ n");
+            scanf ("% d", & sexo);
+        	
+        }
+        
+        
+   	
+   }
+   
+   sexo de retorno;
+   
+   
+	
+}
+
+
+int main (void) {
+	
+	int sex1;
+	char let = 1;
+	char let1 = 2;
+	char let2 = 3;
+	char let3 = 4;
+	char let4 = 5;
+	char let5 = 6; 
+     int r;
+     
+     printf ("\ n Digite 1 para O = outro \ n");
+     printf ("Digite 2 para o = outro \ n");
+     printf ("Digite 3 para F = feminino \ n");
+     printf ("Digite 4 para f = feminino \ n");
+     printf ("Digite 5 para M = masculino \ n");
+     printf ("Digite 6 para m masculino \ n");
+    
+
+   printf ("Digite o sexo: \ n");
+   scanf ("% d", & sex1);
+   
+   
+   r = Sextina (sexo1);
+   
+   printf ("Resultado eh:% d", r);
+   
+ 
+   
+   
+}
+
+-------------------------------------------
+
+função nome
+
+#include <stdio.h>
+    
+    int main (vazio)
+    {
+        int numeroCaracteres = 0;
+        caractere char = getchar ();
+        enquanto (caractere! = '\ n')
+        {
+            numeroCaracteres = numeroCaracteres + 1;
+           caractere = getchar ();
+           
+           
+       }
+       printf ("% d \ n", numeroCaracteres);
+       
+       if (numeroCaracteres> 20)
+           {
+           	printf ("Repita o nome ate chegar a menos de 20 caracteres:");
+           	
+           	int numeroCaracteres = 0;
+        caractere char = getchar ();
+           	
+           	 enquanto (caractere! = '\ n')
+        {
+            numeroCaracteres = numeroCaracteres + 1;
+           caractere = getchar ();
+           
+           
+       }
+       
+       printf ("% d \ n", numeroCaracteres);
+           	
+		   }
+		   
+		   
+       return 0;
+   }
+
+---------------------------------
+
+
+
+ função validarCPF: 
+
+
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+
+
+char cpf (char nome [30], char nome1 [30]) {
+	
+	
+	int i, j, k;
+	
+	
+	para (i = 1, j = 1; i <= 4, j <= 4; i = i + 1, j = j + 1)
+ {
+ 	if (nome [i]! = nome1 [j])
+ 	{
+ 		
+ 		k = k + 1;
+ 		
+ 		
+ 		
+	 }
+
+ }
+ 
+ if (k! = 0)
+ {
+ printf ("Os nomes são diferentes repitam ate estarem iguais: \ n");
+ 
+ printf ("Digite um nome: \ n");
+ scanf ("% s", & nome);
+ 
+ printf ("Digite outro nome: \ n");
+ scanf ("% s", & nome1);
+ 
+ 
+ para (i = 1, j = 1; i <= 4, j <= 4; i = i + 1, j = j + 1)
+ {
+ 	if (nome [i]! = nome1 [j])
+ 	{
+ 		
+ 		k = k + 1;
+ 		
+ 		
+ 		
+	 }
+
+ }
+ 
+ return k;
+ 
+}
+
+senão 
+{
+	printf ("O cpf eh igual: \ n");
+}
+	
+	
+	
+	
+}
+
+
+
+
+int main (vazio)
+
+{
+
+
+	char nome [30], nome1 [30];
+
+int i, j, k = 0;
+
+int r;
+
+
+printf ("Digite o primeiro cpf: \ n");
+ scanf ("% s", & nome);
+ 
+ printf ("Digite o cpf comparador: \ n");
+ scanf ("% s", & nome1);
+ 
+ 
+ r = cpf (nome, nome1);
+ 
+ printf ("O cpf eh igual% s", nome);
+ 
+ 
+}
+
+-------------------------------------
+função nascimento
+
+
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+
+
+char validarNacimento (char nasc [30], char nasc1 [30]) {
+	
+	
+	int i, j, k;
+	
+	
+	para (i = 1, j = 1; i <= 4, j <= 4; i = i + 1, j = j + 1)
+ {
+ 	if (nasc [i]! = nasc1 [j])
+ 	{
+ 		
+ 		k = k + 1;
+ 		
+ 		
+ 		
+	 }
+
+ }
+ 
+ if (k! = 0)
+ {
+ printf ("Os nomes são diferentes repitam ate estarem iguais: \ n");
+ 
+ printf ("Digite a primeira data de nascimento :: \ n");
+ scanf ("% s", & nasc);
+ 
+ printf ("igite a data de nascimento comparadora: \ n");
+ scanf ("% s", & nasc1);
+ 
+ 
+ para (i = 1, j = 1; i <= 4, j <= 4; i = i + 1, j = j + 1)
+ {
+ 	if (nasc [i]! = nasc1 [j])
+ 	{
+ 		
+ 		k = k + 1;
+ 		
+ 		
+ 		
+	 }
+
+ }
+ 
+ return k;
+ 
+}
+
+senão 
+{
+	printf ("O cpf eh igual: \ n");
+}
+	
+	
+	
+	
+}
+
+
+
+
+int main (vazio)
+
+{
+
+
+	char nasc [30], nasc1 [30];
+
+int i, j, k = 0;
+
+char r [30];
+
+
+printf ("Digite a primeira data de nascimento: \ n");
+ scanf ("% s", & nasc);
+ 
+ printf ("Digite a data de nascimento comparadora: \ n");
+ scanf ("% s", & nasc1);
+ 
+ 
+ r [30] = validarNacimento (nasc, nasc1);
+ 
+ printf ("O cpf eh igual% s", nasc);
+ 
+ 
+}
