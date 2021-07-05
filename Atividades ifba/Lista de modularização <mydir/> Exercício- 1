@@ -1,0 +1,28 @@
+1- 
+
+#include <stdio.h>
+#include <conio.h>
+
+int soma (int N1, int N2) 
+{
+  int resultado;
+  resultado = N1 + N2;
+  retorno (resultado); // retornando o valor para main
+}
+/ ******************* função principal (main) ********************* /
+int main (vazio)
+{
+  int V1, V2, resultado;
+  printf ("Digite o primeiro valor:");
+  scanf ("% d", & V1);
+  printf ("Digite o segundo valor:");
+  scanf ("% d", & V2);
+
+  // chama a função e recebe o retorno
+  resultado = soma (V1, V2);
+
+  printf ("Resultado =% d \ n", resultado);
+
+  getch ();
+  return 0;
+}
