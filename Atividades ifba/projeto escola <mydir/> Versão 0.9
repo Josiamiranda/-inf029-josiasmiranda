@@ -1,0 +1,830 @@
+#include <iostream>
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+	//Projeto Escola 0,9 versão
+
+float CadastroAlunos (char nomes [11] [11], char nas [11] [11], char sex [10], int mat [10], int cpf [10])
+{
+	
+
+	int N, j, i, k = 0, k1 = 0, k2 = 0;
+    char aux [11];
+    int nmat;
+    char let, ret;
+    char let1, ret1;
+    char let2, ret2;
+     int r3;
+     
+     let = ret;
+     let1 = ret1;
+     let2 = ret2;
+     
+     rep int, op, l, final;
+     int anv [50], em;
+     
+	
+	printf ("\ n Digite o total de alunos matriculados: \ n");
+	scanf ("% d", & N);
+	getchar ();
+	
+	printf ("Digite o mes atual: \ n");
+    scanf ("% d", & at);
+	
+
+	 
+	 
+	para (i = 1; i <= N; i = i + 1)
+	{
+		
+		printf ("\ n Digite o nome do aluno: \ n");
+		scanf ("% [^ \ n] s", nomes [i]);
+		getchar ();
+		
+		
+		
+		printf ("Digite a data de nascimento: \ n");
+		scanf ("% [^ \ n] s", nas [i]);
+		getchar ();
+		
+		printf ("Digite o sexo: \ n");
+		scanf ("% c", & sex [i]);
+		getchar ();
+		
+		printf ("Digite a Matricula: \ n");
+		scanf ("% d", & mat [i]);
+		getchar ();
+		
+		printf ("Digite o seu cpf: \ n");
+		scanf ("% d", & cpf [i]);
+		getchar ();
+		
+		printf ("Digite o mes do seu aniversario: \ n");
+        scanf ("% d", & anv [i]);  
+        getchar ();
+        
+        if (anv [i] == at)
+{
+	printf ("\ n Aniversariante do mes: \ n");
+}
+		
+	}
+	
+	para (i = 1; i <= N; i = i + 1)
+{
+	if (anv [i] == at)
+{
+	printf ("\ n Aniversariantentes do mes: \ n");
+	
+	printf ("\ n% s \ n", nomes [i]);
+}
+	
+}
+
+	para (i = 0; i <= N; i = i + 1)
+	{
+	
+	 if (sexo [i] == 'm')
+		{
+			printf ("\ n Os alunos do sexo masculino: \ n");
+			
+			printf ("\ n% s \ n", nomes [i]);
+		}
+}
+
+	
+	para (i = 0; i <= N; i = i + 1)
+	{
+		if (sexo [i] == 'f') {
+		
+		
+			printf ("\ n Os alunos do sexo feminino: \ n");
+			
+			printf ("\ n% s: \ n", nomes [i]);
+		}
+		
+		
+	}
+	
+
+printf ("\ naqui estão os nomes na ordem digitada \ n");
+	para (i = 0; i <= N; i ++) {
+		printf ("% s \ n", nomes [i]);
+	}
+	para (i = 0; i <= N; i ++) {
+        para (j = i + 1; j <= N; j ++) {
+            if (strcoll (nomes [i], nomes [j])> 0) {
+                strcpy (aux, nomes [i]);
+                strcpy (nomes [i], nomes [j]);
+                strcpy (nomes [j], aux);
+            }
+        }
+	}
+	printf ("\ naqui os nomes em ordem crescente \ n");
+	para (i = 0; i <= N; i ++) {
+		printf ("% s \ n", nomes [i]);
+	}
+	
+
+
+printf ("\ naqui estão os nomes na ordem digitados com base no nascimento \ n");
+	para (i = 0; i <= N; i ++) {
+		printf ("% s \ n", nas [i]);
+	}
+	para (i = 1; i <= N; i ++) {
+        para (j = i + 1; j <= N; j ++) {
+            if (strcoll (nas [i], nas [j])> 0) {
+                strcpy (aux, nas [i]);
+                strcpy (nas [i], nas [j]);
+                strcpy (nas [j], aux);
+            }
+        }
+	}
+	printf ("\ naqui matriculas em ordem crescente e seu nome crescente \ n");
+	para (i = 0; i <= N; i ++) {
+		printf ("\ n% s \ n \ n% s \ n", nas [i], nomes [i]);
+	}
+	
+	para (i = 0; i <= N; i ++) {
+	para (i = 0; i <= N; i ++) {
+            if (nomes [i] [i] == ret) {
+            	
+            	k = k + 1;
+               
+            }
+        if (k> = 1)
+        {
+        	pausa;
+		}
+	}
+	// printf ("A quantidade que se repete eh:% d", k);
+	para (i = 0; i <= N; i ++) {
+            if (nomes [i] [i] == ret1) {
+            	
+            	k1 = k1 + 1;
+               
+            }
+        if (k1> = 1)
+        {
+        	pausa;
+		}
+	}
+	// printf ("A quantidade que se repete eh:% d", k1);
+	 
+	para (i = 0; i <= N; i ++) {
+            if (nomes [i] [i] == ret2) {
+            	
+            	k2 = k2 + 1;
+               
+            }
+        if (k2> = 1)
+        {
+        	pausa;
+		}
+	}
+	// printf ("A quantidade que se repete eh:% d", k2);
+	
+	r3 = k + k1 + k2;
+	
+	if (r3 == 3)
+	{
+		
+		printf ("\ n As três letras foram achadas no nome:% s \ n", nomes [i]);
+	}
+
+}
+
+
+printf ("Digite 1 para efetuar alguma alteração relacionada a exclusão ou troca ou 2 para finalizar o programa: \ n");
+scanf ("% d", & final);
+
+if (final == 1)
+{
+
+printf ("Se voce deseja substutuir digite 0 para aluno / se voce deseja apagar digite 1 para aluno: \ n");
+scanf ("% d", & rep);
+getchar ();
+
+
+
+printf ("Digite a quantidade de vezes que pretende efetuar a operação: \ n");
+scanf ("% d", & op);
+
+getchar ();
+
+para (i = 0; i <= op; i = i + 1)
+{
+
+
+if (rep == 0)
+{
+	printf ("Digite o local da substituicao: \ n");
+	scanf ("% d", & l); // ou & i
+	getchar ();
+	
+	printf ("Reinsira novamente os dados: \ n");
+	
+	printf ("\ n Digite o nome do aluno: \ n");
+		scanf ("% [^ \ n] s", nomes [l]);
+		getchar ();
+		
+		
+		
+		printf ("Digite a data de nascimento: \ n");
+		scanf ("% [^ \ n] s", nas [l]);
+		getchar ();
+		
+		printf ("Digite o sexo: \ n");
+		scanf ("% c", & sex [l]);
+		getchar ();
+		
+		printf ("Digite a Matricula: \ n");
+		scanf ("% d", & mat [l]);
+		getchar ();
+		
+		printf ("Digite o seu cpf: \ n");
+		scanf ("% d", & cpf [l]);
+		getchar ();
+	
+}
+
+else if (rep == 1)
+{
+	printf ("Digite o local que sera apagado: \ n");
+	scanf ("% d", & l);
+	
+	// printf ("Nome");
+	// scanf ("nome [l]");
+	
+	  // nome [l] == 0;
+	  
+	  
+	printf ("\ n Digite o nome do aluno: \ n");
+		scanf ("% [^ \ n] s", nomes [l]);
+		getchar ();
+		
+		nomes [l] == 0;
+		
+		printf ("Digite a data de nascimento: \ n");
+		scanf ("% [^ \ n] s", nas [l]);
+		getchar ();
+		
+		nas [l] == 0;
+		
+		printf ("Digite o sexo: \ n");
+		scanf ("% c", & sex [l]);
+		getchar ();
+		
+		sexo [l] == 0;
+		
+		printf ("Digite a Matricula: \ n");
+		scanf ("% d", & mat [l]);
+		getchar ();
+		
+		tapete [l] == 0;
+		
+		printf ("Digite o seu cpf: \ n");
+		scanf ("% d", & cpf [l]);
+		getchar ();
+		
+		cpf [l] == 0;
+}
+
+}
+
+
+para (i = 0; i <= N; i = i + 1)
+{
+	if (nomes [i] == 0)
+	{
+		
+		printf ("O nome correspondente ao número:% d foi excluido do sistema", i);
+		
+		i = i + 1;
+		
+		para (i = 1; i <= nmat; i = i + 1)
+		{
+			printf ("Os atuais nomes registrados nos sistemas sao:% s", nomes [i]);
+		}
+	}
+}
+
+}
+else if (final == 1 || final! = 0)
+{
+	printf ("Fim do programa: \ n");
+}
+
+	
+	return N;
+}
+
+
+float CadastroProfessores (char nomes1 [11] [11], char nas1 [11] [11], char sex1 [10], int mat1 [10], int cpf1 [10])
+{
+	
+
+	int N1, j, i, k = 0, k1 = 0, k2 = 0;
+    char aux1 [11];
+    int nmat;
+    
+    char let, ret;
+    char let1, ret1;
+    char let2, ret2;
+     int r3;
+     
+     let = ret;
+     let1 = ret1;
+     let2 = ret2;
+     
+     rep int, op, l, final1;
+     
+    int anv1 [50], at1;
+	
+	printf ("Digite o total de professores matriculados: \ n");
+	scanf ("% d", & N1);
+	getchar ();
+	
+	
+printf ("Digite o mes atual: \ n");
+scanf ("% d", & at1);
+getchar ();
+
+	 
+	 
+	para (i = 1; i <= N1; i = i + 1)
+	{
+		
+		printf ("\ n Digite o nome do Professor: \ n");
+		scanf ("% [^ \ n] s", nomes1 [i]);
+		getchar ();
+		
+		
+		
+		printf ("Digite sua data de nascimento: \ n");
+		scanf ("% [^ \ n] s", nas1 [i]);
+		getchar ();
+		
+		printf ("Digite seu sexo: \ n");
+		scanf ("% c", & sex1 [i]);
+		getchar ();
+		
+		printf ("Digite sua Matricula: \ n");
+		scanf ("% d", & mat1 [i]);
+		getchar ();
+		
+		printf ("Digite o seu cpf: \ n");
+		scanf ("% d", & cpf1 [i]);
+		getchar ();
+		
+		printf ("Digite o mes do seu aniversario: \ n");
+        scanf ("% d", & anv1 [i]);
+        getchar;
+		
+		if (anv1 [i] == at1)
+{
+	printf ("\ n Aniversariante do mes: \ n");
+}
+	}
+	
+	para (i = 1; i <= N1; i = i + 1)
+{
+	if (anv1 [i] == at1)
+{
+	printf ("\ n Aniversariantentes do mes: \ n");
+	
+	printf ("% s", nomes1 [i]);
+}
+	
+}
+	para (i = 0; i <= N1; i = i + 1)
+	{
+	
+	 if (sex1 [i] == 'm')
+		{
+			printf ("\ n Os professores do sexo masculino: \ n");
+			
+			printf ("\ n% s \ n", nomes1 [i]);
+		}
+}
+
+	
+	para (i = 0; i <= N1; i = i + 1)
+	{
+		if (sex1 [i] == 'f') {
+		
+		
+			printf ("\ n Os professores do sexo feminino: \ n");
+			
+			printf ("\ n% s: \ n", nomes1 [i]);
+		}
+		
+		
+	}
+	
+
+printf ("\ naqui estão os nomes na ordem digitada \ n");
+	para (i = 0; i <= N1; i ++) {
+		printf ("% s \ n", nomes1 [i]);
+	}
+	para (i = 0; i <= N1; i ++) {
+        para (j = i + 1; j <= N1; j ++) {
+            if (strcoll (nomes1 [i], nomes1 [j])> 0) {
+                strcpy (aux1, nomes1 [i]);
+                strcpy (nomes1 [i], nomes1 [j]);
+                strcpy (nomes1 [j], aux1);
+            }
+        }
+	}
+	printf ("\ naqui os nomes em ordem crescente \ n");
+	para (i = 0; i <= N1; i ++) {
+		printf ("% s \ n", nomes1 [i]);
+	}
+	
+
+
+printf ("\ naqui estão os nomes na ordem digitados com base no nascimento \ n");
+	para (i = 0; i <= N1; i ++) {
+		printf ("% s \ n", nas1 [i]);
+	}
+	para (i = 1; i <= N1; i ++) {
+        para (j = i + 1; j <= N1; j ++) {
+            if (strcoll (nas1 [i], nas1 [j])> 0) {
+                strcpy (aux1, nas1 [i]);
+                strcpy (nas1 [i], nas1 [j]);
+                strcpy (nas1 [j], aux1);
+            }
+        }
+	}
+	printf ("\ naqui matriculas em ordem crescente e seu nome crescente \ n");
+	para (i = 0; i <= N1; i ++) {
+		printf ("\ n% s \ n \ n% s \ n", nas1 [i], nomes1 [i]);
+	}
+	
+	para (i = 0; i <= N1; i ++) {
+	para (i = 0; i <= N1; i ++) {
+            if (nomes1 [i] [i] == ret) {
+            	
+            	k = k + 1;
+               
+            }
+        if (k> = 1)
+        {
+        	pausa;
+		}
+	}
+	// printf ("A quantidade que se repete eh:% d", k);
+	para (i = 0; i <= N1; i ++) {
+            if (nomes1 [i] [i] == ret1) {
+            	
+            	k1 = k1 + 1;
+               
+            }
+        if (k1> = 1)
+        {
+        	pausa;
+		}
+	}
+	// printf ("A quantidade que se repete eh:% d", k1);
+	 
+	para (i = 0; i <= N1; i ++) {
+            if (nomes1 [i] [i] == ret2) {
+            	
+            	k2 = k2 + 1;
+               
+            }
+        if (k2> = 1)
+        {
+        	pausa;
+		}
+	}
+	// printf ("A quantidade que se repete eh:% d", k2);
+	
+	r3 = k + k1 + k2;
+	
+	if (r3 == 3)
+	{
+		
+		printf ("\ n As três letras foram achadas no nome:% s \ n", nomes1 [i]);
+	}
+
+}
+printf ("Digite 1 para efetuar alguma alteração relacionada a exclusão ou troca ou 2 para finalizar o programa: \ n");
+scanf ("% d", & final1);
+
+if (final1 == 1)
+{
+
+  
+printf ("Se voce deseja substutuir digite 0 para professor / se voce deseja apagar digite 1 para professor: \ n");
+scanf ("% d", & rep);
+getchar ();
+
+printf ("Digite a quantidade de vezes que pretende efetuar a operação: \ n");
+scanf ("% d", & op);
+getchar ();
+
+para (i = 0; i <= op; i = i + 1)
+{
+
+
+if (rep == 0)
+{
+	printf ("Digite o local da substituicao: \ n");
+	scanf ("% d", & l); // ou & i
+	getchar ();
+	
+	printf ("Reinsira novamente os dados: \ n");
+	
+	printf ("\ n Digite o nome do professor: \ n");
+		scanf ("% [^ \ n] s", & nomes1 [l]);
+		getchar ();
+		
+		
+		
+		printf ("Digite a data de nascimento: \ n");
+		scanf ("% [^ \ n] s", nas1 [l]);
+		getchar ();
+		
+		printf ("Digite o sexo: \ n");
+		scanf ("% c", & sex1 [l]);
+		getchar ();
+		
+		printf ("Digite a Matricula: \ n");
+		scanf ("% d", & mat1 [l]);
+		getchar ();
+		
+		printf ("Digite o seu cpf: \ n");
+		scanf ("% d", & cpf1 [l]);
+		getchar ();
+	
+}
+
+else if (rep == 1)
+{
+	printf ("Digite o local que sera apagado: \ n");
+	scanf ("% d", & l);
+	
+	// printf ("Nome");
+	// scanf ("nome [l]");
+	
+	  // nome [l] == 0;
+	  
+	  
+	printf ("\ n Digite o nome do professor: \ n");
+		scanf ("% [^ \ n] s", nomes1 [l]);
+		getchar ();
+		
+		nomes1 [l] == 0;
+		
+		printf ("Digite a data de nascimento: \ n");
+		scanf ("% [^ \ n] s", nas1 [l]);
+		getchar ();
+		
+		nas1 [l] == 0;
+		
+		printf ("Digite o sexo: \ n");
+		scanf ("% c", & sex1 [l]);
+		getchar ();
+		
+		sexo1 [l] == 0;
+		
+		printf ("Digite a Matricula: \ n");
+		scanf ("% d", & mat1 [l]);
+		getchar ();
+		
+		mat1 [l] == 0;
+		
+		printf ("Digite o seu cpf: \ n");
+		scanf ("% d", & cpf1 [l]);
+		getchar ();
+		
+		cpf1 [l] == 0;
+}
+
+}
+
+
+para (i = 0; i <= N1; i = i + 1)
+{
+	if (nomes1 [i] == 0)
+	{
+		
+		printf ("O nome correspondente ao número:% d foi excluido do sistema", i);
+		
+		i = i + 1;
+		
+		para (i = 1; i <= N1; i = i + 1)
+		{
+			printf ("Os atuais nomes registrados nos sistemas sao:% s", nomes1 [i]);
+		}
+	}
+}
+
+}
+else if (final1 == 1 || final1! = 0)
+{
+	printf ("Fim do programa: \ n");
+}
+	
+	return N1;
+}
+
+
+ float Disciplinas (char nomes2 [11] [11], char nas2 [11] [11], int mat2 [11], int qtd [15], int cod2 [15])
+ {
+	int N, j, i;
+    char aux2 [11];
+    int nmat2, cpf1;
+    char sex1;
+     int mat [15];
+    
+   
+    
+ 	
+ 	printf ("\ n \ n Digite o total de disciplinas no sistema matriculados: \ n");
+	scanf ("% d", & nmat2);
+	
+	
+	
+	para (i = 1; i <= nmat2; i = i + 1)
+	{
+	
+		
+		printf ("Digite o codigo da disciplina: \ n");
+		scanf ("% d", & cod2 [i]);
+        getchar ();
+        
+        printf ("Digite o nome da disciplina: \ n");
+		scanf ("% [^ \ n] s", nomes2 [i]);
+		getchar ();
+        
+		printf ("Digite o semestre: \ n");
+		scanf ("% d", & mat2 [i]);
+		getchar ();
+		
+		printf ("Digite o nome do professor: \ n");
+		scanf ("% [^ \ n] s", & nas2 [i]);
+		getchar ();
+		
+		printf ("Digite a quantidade de alunos matriculados: \ n");
+		scanf ("% d", & qtd [i]);
+	    getchar ();
+	    
+	}
+	    
+	    para (i = 0; i <= nmat2; i = i + 1)
+	{
+	    
+	    	para (j = 0; j <= qtd [i]; j = j + 1)
+		{
+			printf ("\ n \ n Digite a matrícula do aluno:% d cadastrado na disciplina:% d \ n", j, cod2 [i]);
+			scanf ("% d", & mat [j]);
+		}
+	}
+	
+	
+	para (i = 0; i <= nmat2; i = i + 1)
+	{
+		if (qtd [i]> 40)
+		{
+			printf ("\ n O nome do professor que extrapolam 40 vagas:% s \ n", nas2 [i]);
+		}
+	}
+	
+	return nmat2;
+ 	
+ }
+
+
+
+
+int main (void) {
+	
+	
+	int r;
+	int r1;
+	int N, j, i, N1;
+    char aux [11];
+     char aux1 [11];
+    
+    
+    int mat [10], cpf [10], nmat;
+    sexo char [10];
+    int mat1 [10], cpf1 [10], nmat1;
+    char sex1 [10];
+    
+
+	
+	 char nomes [1] [11];
+	char nas [1] [11];
+	char nomes1 [1] [11];
+	 char nas1 [1] [11];
+	 
+	 int r2;
+    char nas2 [11] [11];
+    char nomes2 [11] [11];
+    cod2 int [15];
+    int qtd [15];
+    int mat2 [15];
+    
+	
+	 char let;
+    char let1;
+    char let2;
+    
+		printf ("Digite o codigo da disciplina: \ n");
+		scanf ("% d", & cod2 [0]);
+        getchar ();
+        
+        printf ("Digite o nome da disciplina: \ n");
+		scanf ("% [^ \ n] s", & nomes2 [0]);
+		getchar ();
+        
+		printf ("Digite o semestre: \ n");
+		scanf ("% d", & mat2 [0]);
+		getchar ();
+		
+		printf ("Digite o nome do professor: \ n");
+		scanf ("% [^ \ n] s", & nas2 [0]);
+		getchar ();
+		
+		printf ("Digite a quantidade de alunos matriculados: \ n");
+		scanf ("% d", & qtd [0]);
+	    getchar ();
+	    
+         
+	
+		
+		printf ("\ n Digite o nome do aluno: \ n");
+		scanf ("% [^ \ n] s", nomes [0]);
+		getchar ();
+		
+		
+		
+		printf ("Digite a data de nascimento: \ n");
+		scanf ("% [^ \ n] s", nas [0]);
+		getchar ();
+		
+		printf ("Digite o sexo: \ n");
+		scanf ("% c", & sex [0]);
+		getchar ();
+		
+		printf ("Digite a Matricula: \ n");
+		scanf ("% d", & mat [0]);
+		getchar ();
+		
+		printf ("Digite o seu cpf: \ n");
+		scanf ("% d", & cpf [0]);
+		getchar ();
+		
+	
+		
+		printf ("\ n Digite o nome do professor: \ n");
+		scanf ("% [^ \ n] s", nomes1 [0]);
+		getchar ();
+		
+		
+		
+		printf ("Digite a sua data de nascimento: \ n");
+		scanf ("% [^ \ n] s", nas1 [0]);
+		getchar ();
+		
+		printf ("Digite o seu sexo: \ n");
+		scanf ("% c", & sex1 [0]);
+		getchar ();
+		
+		printf ("Digite a sua Matricula: \ n");
+		scanf ("% d", & mat1 [0]);
+		getchar ();
+		
+		printf ("Digite o seu cpf: \ n");
+		scanf ("% d", & cpf1 [0]);
+		getchar ();
+		
+		
+		
+	printf ("Digite a primeira letra comparativa: \ n");
+	scanf ("% s", & let);
+	printf ("Digite a segunda letra comparativa: \ n");
+	scanf ("% s", & let1);
+	printf ("Digite a terceira letra comparativa: \ n");
+	scanf ("% s", & let2);
+		
+		
+	r2 = Disciplinas (nomes2, nas2, mat2, qtd, cod2);
+
+    printf ("O resultado da quantidade de Disciplinas e:% d", r2 + 1);
+	
+	
+	r1 = CadastroProfessores (nomes1, nas1, sex1, mat1, cpf1);
+	
+	printf ("\ n O resultado da quantidade de professores e:% d \ n", r1 + 1);
+		
+	
+	
+	r = CadastroAlunos (nomes, nas, sexo, mat, cpf);
+	
+	printf ("\ n O resultado da quantidade de alunos e:% d \ n", r + 1);
+}
