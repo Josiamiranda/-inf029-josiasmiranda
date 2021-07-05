@@ -1,0 +1,58 @@
+
+
+vetor int (int num1, int num2, int num3)
+{
+
+	int i, vet [30], r, r1, r2;
+
+
+	r = num1;
+    r1 = num2;
+    r2 = num3;
+
+
+
+
+	 return r;
+
+}
+
+int main (vazio)
+{
+
+	struct numeros_3_alunos
+
+	{
+
+		int num1;
+		int num2;
+        int num3;
+        int rt;
+	};
+
+
+	struct numeros_3_alunos alunos;
+
+	printf ("Informe o primeiro numero: \ n");
+	scanf ("% d", & alunos.num1);
+
+	printf ("Informe o segundo numero: \ n");
+	scanf ("% d", & alunos.num2);
+
+        printf ("Informe o terceiro numero: \ n");
+	scanf ("% d", & alunos.num3);
+
+	printf ("Variáveis: \ n");
+
+
+	alunos.rt = vetor (alunos.num1, alunos.num2, alunos.num3);
+
+	printf ("O primeiro numero eh:% d \ n", alunos.num1);
+
+	printf ("O Segundo numero eh:% d \ n", alunos.num2);
+
+        printf ("O terceiro numero eh:% d \ n", alunos.num3);
+
+
+
+}
