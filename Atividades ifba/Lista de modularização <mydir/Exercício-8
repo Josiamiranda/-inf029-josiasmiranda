@@ -1,0 +1,51 @@
+8-
+
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+
+int cadastrarCliente (char nome [30], int data, int cpf, char sex) {
+
+
+ int i, r1, r2, r3;
+
+ char r [30];
+
+
+    r [30] = nome [30];
+    r1 = dados;
+    r2 = cpf;
+    r3 = sexo;
+
+
+
+	 return r [30];
+ }
+
+
+ int main (vazio)
+{
+  int V2, V3, resultado;
+
+  char V1 [30], sexo;
+
+
+  printf ("Digite o nome:");
+  scanf ("% s", & V1);
+
+  printf ("Digite a data de nascimento:");
+  scanf ("% d", & V2);
+
+  printf ("Digite o cpf:");
+  scanf ("% d", & V3);
+
+  printf ("Digite o sexo: \ n");
+  scanf ("% s", & sexo);
+
+  resultado = cadastrarCliente (V1, V2, V3, sexo);
+
+
+  printf ("O nome eh:% s- sua data de nascimento eh:% d - Seu cpf eh:% d- seu sexo eh:% c", V1, V2, V3, sexo);
+
+}
